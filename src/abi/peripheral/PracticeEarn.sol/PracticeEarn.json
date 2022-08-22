@@ -1,0 +1,96 @@
+[
+    {
+        "inputs": [],
+        "name": "contractName",
+        "outputs": [
+            {
+                "internalType": "string",
+                "name": "",
+                "type": "string"
+            }
+        ],
+        "stateMutability": "view",
+        "type": "function"
+    },
+    {
+        "inputs": [],
+        "name": "contractVersion",
+        "outputs": [
+            {
+                "internalType": "string",
+                "name": "",
+                "type": "string"
+            }
+        ],
+        "stateMutability": "view",
+        "type": "function"
+    },
+    {
+        "inputs": [
+            {
+                "internalType": "address",
+                "name": "pool_",
+                "type": "address"
+            },
+            {
+                "internalType": "address[]",
+                "name": "accounts_",
+                "type": "address[]"
+            }
+        ],
+        "name": "getTdInfos",
+        "outputs": [
+            {
+                "components": [
+                    {
+                        "internalType": "address",
+                        "name": "account",
+                        "type": "address"
+                    },
+                    {
+                        "internalType": "uint256",
+                        "name": "pTokenId",
+                        "type": "uint256"
+                    },
+                    {
+                        "internalType": "int256",
+                        "name": "amountB0",
+                        "type": "int256"
+                    },
+                    {
+                        "internalType": "uint256",
+                        "name": "vaultLiquidity",
+                        "type": "uint256"
+                    },
+                    {
+                        "components": [
+                            {
+                                "internalType": "string",
+                                "name": "symbol",
+                                "type": "string"
+                            },
+                            {
+                                "internalType": "int256",
+                                "name": "volume",
+                                "type": "int256"
+                            },
+                            {
+                                "internalType": "int256",
+                                "name": "cost",
+                                "type": "int256"
+                            }
+                        ],
+                        "internalType": "struct PracticeEarn.PositionInfo[]",
+                        "name": "positions",
+                        "type": "tuple[]"
+                    }
+                ],
+                "internalType": "struct PracticeEarn.TdInfo[]",
+                "name": "tdInfos",
+                "type": "tuple[]"
+            }
+        ],
+        "stateMutability": "view",
+        "type": "function"
+    }
+]

@@ -1,0 +1,460 @@
+[
+    {
+        "anonymous": false,
+        "inputs": [
+            {
+                "indexed": true,
+                "internalType": "address",
+                "name": "newAdmin",
+                "type": "address"
+            }
+        ],
+        "name": "NewAdmin",
+        "type": "event"
+    },
+    {
+        "inputs": [],
+        "name": "admin",
+        "outputs": [
+            {
+                "internalType": "address",
+                "name": "",
+                "type": "address"
+            }
+        ],
+        "stateMutability": "view",
+        "type": "function"
+    },
+    {
+        "inputs": [],
+        "name": "factory",
+        "outputs": [
+            {
+                "internalType": "contract IUniswapV2Factory",
+                "name": "",
+                "type": "address"
+            }
+        ],
+        "stateMutability": "view",
+        "type": "function"
+    },
+    {
+        "inputs": [
+            {
+                "internalType": "address",
+                "name": "tokenBX",
+                "type": "address"
+            }
+        ],
+        "name": "getPath",
+        "outputs": [
+            {
+                "internalType": "address[]",
+                "name": "",
+                "type": "address[]"
+            }
+        ],
+        "stateMutability": "view",
+        "type": "function"
+    },
+    {
+        "inputs": [
+            {
+                "internalType": "address",
+                "name": "tokenBX",
+                "type": "address"
+            }
+        ],
+        "name": "getTokenPrice",
+        "outputs": [
+            {
+                "internalType": "uint256",
+                "name": "",
+                "type": "uint256"
+            }
+        ],
+        "stateMutability": "view",
+        "type": "function"
+    },
+    {
+        "inputs": [
+            {
+                "internalType": "address",
+                "name": "tokenBX",
+                "type": "address"
+            }
+        ],
+        "name": "isSupportedToken",
+        "outputs": [
+            {
+                "internalType": "bool",
+                "name": "",
+                "type": "bool"
+            }
+        ],
+        "stateMutability": "view",
+        "type": "function"
+    },
+    {
+        "inputs": [],
+        "name": "maxSlippageRatio",
+        "outputs": [
+            {
+                "internalType": "uint256",
+                "name": "",
+                "type": "uint256"
+            }
+        ],
+        "stateMutability": "view",
+        "type": "function"
+    },
+    {
+        "inputs": [],
+        "name": "nameId",
+        "outputs": [
+            {
+                "internalType": "bytes32",
+                "name": "",
+                "type": "bytes32"
+            }
+        ],
+        "stateMutability": "view",
+        "type": "function"
+    },
+    {
+        "inputs": [],
+        "name": "oracleManager",
+        "outputs": [
+            {
+                "internalType": "contract IOracleManager",
+                "name": "",
+                "type": "address"
+            }
+        ],
+        "stateMutability": "view",
+        "type": "function"
+    },
+    {
+        "inputs": [
+            {
+                "internalType": "address",
+                "name": "tokenBX",
+                "type": "address"
+            }
+        ],
+        "name": "oracleSymbolIds",
+        "outputs": [
+            {
+                "internalType": "bytes32",
+                "name": "",
+                "type": "bytes32"
+            }
+        ],
+        "stateMutability": "view",
+        "type": "function"
+    },
+    {
+        "inputs": [],
+        "name": "router",
+        "outputs": [
+            {
+                "internalType": "contract IUniswapV2Router02",
+                "name": "",
+                "type": "address"
+            }
+        ],
+        "stateMutability": "view",
+        "type": "function"
+    },
+    {
+        "inputs": [
+            {
+                "internalType": "address",
+                "name": "newAdmin",
+                "type": "address"
+            }
+        ],
+        "name": "setAdmin",
+        "outputs": [],
+        "stateMutability": "nonpayable",
+        "type": "function"
+    },
+    {
+        "inputs": [
+            {
+                "internalType": "string",
+                "name": "priceSymbol",
+                "type": "string"
+            },
+            {
+                "internalType": "address[]",
+                "name": "path",
+                "type": "address[]"
+            }
+        ],
+        "name": "setPath",
+        "outputs": [],
+        "stateMutability": "nonpayable",
+        "type": "function"
+    },
+    {
+        "inputs": [
+            {
+                "internalType": "address",
+                "name": "tokenBX",
+                "type": "address"
+            },
+            {
+                "internalType": "uint256",
+                "name": "maxAmountB0",
+                "type": "uint256"
+            },
+            {
+                "internalType": "uint256",
+                "name": "amountBX",
+                "type": "uint256"
+            }
+        ],
+        "name": "swapB0ForExactBX",
+        "outputs": [
+            {
+                "internalType": "uint256",
+                "name": "resultB0",
+                "type": "uint256"
+            },
+            {
+                "internalType": "uint256",
+                "name": "resultBX",
+                "type": "uint256"
+            }
+        ],
+        "stateMutability": "nonpayable",
+        "type": "function"
+    },
+    {
+        "inputs": [
+            {
+                "internalType": "uint256",
+                "name": "maxAmountB0",
+                "type": "uint256"
+            },
+            {
+                "internalType": "uint256",
+                "name": "amountBX",
+                "type": "uint256"
+            }
+        ],
+        "name": "swapB0ForExactETH",
+        "outputs": [
+            {
+                "internalType": "uint256",
+                "name": "resultB0",
+                "type": "uint256"
+            },
+            {
+                "internalType": "uint256",
+                "name": "resultBX",
+                "type": "uint256"
+            }
+        ],
+        "stateMutability": "nonpayable",
+        "type": "function"
+    },
+    {
+        "inputs": [
+            {
+                "internalType": "address",
+                "name": "tokenBX",
+                "type": "address"
+            },
+            {
+                "internalType": "uint256",
+                "name": "amountB0",
+                "type": "uint256"
+            },
+            {
+                "internalType": "uint256",
+                "name": "maxAmountBX",
+                "type": "uint256"
+            }
+        ],
+        "name": "swapBXForExactB0",
+        "outputs": [
+            {
+                "internalType": "uint256",
+                "name": "resultB0",
+                "type": "uint256"
+            },
+            {
+                "internalType": "uint256",
+                "name": "resultBX",
+                "type": "uint256"
+            }
+        ],
+        "stateMutability": "nonpayable",
+        "type": "function"
+    },
+    {
+        "inputs": [
+            {
+                "internalType": "uint256",
+                "name": "amountB0",
+                "type": "uint256"
+            }
+        ],
+        "name": "swapETHForExactB0",
+        "outputs": [
+            {
+                "internalType": "uint256",
+                "name": "resultB0",
+                "type": "uint256"
+            },
+            {
+                "internalType": "uint256",
+                "name": "resultBX",
+                "type": "uint256"
+            }
+        ],
+        "stateMutability": "payable",
+        "type": "function"
+    },
+    {
+        "inputs": [
+            {
+                "internalType": "address",
+                "name": "tokenBX",
+                "type": "address"
+            },
+            {
+                "internalType": "uint256",
+                "name": "amountB0",
+                "type": "uint256"
+            }
+        ],
+        "name": "swapExactB0ForBX",
+        "outputs": [
+            {
+                "internalType": "uint256",
+                "name": "resultB0",
+                "type": "uint256"
+            },
+            {
+                "internalType": "uint256",
+                "name": "resultBX",
+                "type": "uint256"
+            }
+        ],
+        "stateMutability": "nonpayable",
+        "type": "function"
+    },
+    {
+        "inputs": [
+            {
+                "internalType": "uint256",
+                "name": "amountB0",
+                "type": "uint256"
+            }
+        ],
+        "name": "swapExactB0ForETH",
+        "outputs": [
+            {
+                "internalType": "uint256",
+                "name": "resultB0",
+                "type": "uint256"
+            },
+            {
+                "internalType": "uint256",
+                "name": "resultBX",
+                "type": "uint256"
+            }
+        ],
+        "stateMutability": "nonpayable",
+        "type": "function"
+    },
+    {
+        "inputs": [
+            {
+                "internalType": "address",
+                "name": "tokenBX",
+                "type": "address"
+            },
+            {
+                "internalType": "uint256",
+                "name": "amountBX",
+                "type": "uint256"
+            }
+        ],
+        "name": "swapExactBXForB0",
+        "outputs": [
+            {
+                "internalType": "uint256",
+                "name": "resultB0",
+                "type": "uint256"
+            },
+            {
+                "internalType": "uint256",
+                "name": "resultBX",
+                "type": "uint256"
+            }
+        ],
+        "stateMutability": "nonpayable",
+        "type": "function"
+    },
+    {
+        "inputs": [],
+        "name": "swapExactETHForB0",
+        "outputs": [
+            {
+                "internalType": "uint256",
+                "name": "resultB0",
+                "type": "uint256"
+            },
+            {
+                "internalType": "uint256",
+                "name": "resultBX",
+                "type": "uint256"
+            }
+        ],
+        "stateMutability": "payable",
+        "type": "function"
+    },
+    {
+        "inputs": [],
+        "name": "tokenB0",
+        "outputs": [
+            {
+                "internalType": "address",
+                "name": "",
+                "type": "address"
+            }
+        ],
+        "stateMutability": "view",
+        "type": "function"
+    },
+    {
+        "inputs": [],
+        "name": "tokenWETH",
+        "outputs": [
+            {
+                "internalType": "address",
+                "name": "",
+                "type": "address"
+            }
+        ],
+        "stateMutability": "view",
+        "type": "function"
+    },
+    {
+        "inputs": [],
+        "name": "versionId",
+        "outputs": [
+            {
+                "internalType": "bytes32",
+                "name": "",
+                "type": "bytes32"
+            }
+        ],
+        "stateMutability": "view",
+        "type": "function"
+    }
+]

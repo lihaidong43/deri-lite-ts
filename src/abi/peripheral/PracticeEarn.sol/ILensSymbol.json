@@ -1,0 +1,64 @@
+[
+    {
+        "inputs": [],
+        "name": "nameId",
+        "outputs": [
+            {
+                "internalType": "bytes32",
+                "name": "",
+                "type": "bytes32"
+            }
+        ],
+        "stateMutability": "view",
+        "type": "function"
+    },
+    {
+        "inputs": [
+            {
+                "internalType": "uint256",
+                "name": "pTokenId",
+                "type": "uint256"
+            }
+        ],
+        "name": "positions",
+        "outputs": [
+            {
+                "components": [
+                    {
+                        "internalType": "int256",
+                        "name": "volume",
+                        "type": "int256"
+                    },
+                    {
+                        "internalType": "int256",
+                        "name": "cost",
+                        "type": "int256"
+                    },
+                    {
+                        "internalType": "int256",
+                        "name": "cumulativeFundingPerVolume",
+                        "type": "int256"
+                    }
+                ],
+                "internalType": "struct ILensSymbol.Position",
+                "name": "",
+                "type": "tuple"
+            }
+        ],
+        "stateMutability": "view",
+        "type": "function"
+    },
+    {
+        "inputs": [],
+        "name": "symbol",
+        "outputs": [
+            {
+                "internalType": "string",
+                "name": "",
+                "type": "string"
+            }
+        ],
+        "stateMutability": "view",
+        "type": "function"
+    }
+]
