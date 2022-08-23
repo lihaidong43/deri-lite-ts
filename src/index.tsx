@@ -4,16 +4,26 @@ import { Provider } from 'react-redux';
 import { store } from './app/store';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
+import {Web3ReactProvider} from '@web3-react/core'
+import {Web3Provider} from '@ethersproject/providers'
 import './index.css';
 
 const container = document.getElementById('root')!;
 const root = createRoot(container);
 
+const getLibrary = (provider : any) : Web3Provider => {
+  const library = new Web3Provider(provider);
+  library.pollingInterval = 8000
+  return library;
+}
+
 root.render(
   <React.StrictMode>
-    <Provider store={store}>
-      <App />
-    </Provider>
+    <Web3ReactProvider getLibrary={getLibrary}>
+      <Provider store={store}>
+        <App />
+      </Provider>
+    </Web3ReactProvider>
   </React.StrictMode>
 );
 

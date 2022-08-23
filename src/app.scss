@@ -1,0 +1,35 @@
+.app {
+  display: grid;  
+  grid-template-columns: 50% 50%;
+  grid-template-rows: 64px 1fr;
+  grid-template-areas: "wallet-panel wallet-panel " "trade-panel account-panel" "positions-panel positions-panel" "contract-panel history-panel";    
+  grid-gap: 10px;
+  .wallet-panel,.trade-panel,.account-panel,.history-panel,.contract-panel,.positions-panel {
+    text-align : left;
+    padding : 20px;
+    background : #de8413;
+    // margin : 10px ;
+    h2 {
+      padding : 0px;
+    }
+  }
+  .wallet-panel {
+    grid-area: wallet-panel;   
+  }
+  .trade-panel {
+    grid-area: trade-panel;   
+  }
+  .account-panel {
+    grid-area: account-panel;   
+  }
+  .positions-panel {
+    grid-area: positions-panel;   
+  }
+  .contract-panel {
+    grid-area: contract-panel;   
+  }
+  
+  .history-panel {
+    grid-area: history-panel;   
+  }
+}

@@ -2,23 +2,32 @@ import { useCallback, useState } from "react"
 import styled from 'styled-components'
 
 const TradeWrapper = styled.div`
-  text-align : left;
-  padding : 4px 30px 30px 30px;
-  width : 400px;
-  background : #de8413;
-  h2 {
-    padding : 0px;
-  }
   .form {
-    margin : 20px 0 ;
-    label {
-      margin-right : 10px;
-    }
-    input {
-      height : 20px;
-      width : 79%;
-      margin-left : 10px;
-      border: 0;
+    .item {
+      margin : 20px 0 ;
+      line-height: 40px;
+      display: flex;
+      align-items: center;
+      font-size: 16px;
+      label {
+        margin-right : 10px;
+        width : 50px;
+      }
+      input,select {
+        height: 24px;
+        width: 92%;
+        margin-left: 10px;
+        border: 0;
+        font-size: 24px;
+      }
+      select {
+        border :1px;
+        font-size : 18px;
+      }
+      input::-webkit-inner-spin-button {
+        -webkit-appearance: none;
+        margin: 0;
+      }
     }
   }
 
@@ -38,11 +47,28 @@ export default function Transaction(){
     
   },[volume])
   return (
-    <TradeWrapper>
+    <TradeWrapper className='trade-panel'>
       <h2>Trade panel</h2>
       <div className='form'>
-        <label>volume:</label>
-        <input value={volume} type='number' onChange={e => setVolume(e.target.value)}/>
+        <div className='item'>
+          <label>type :</label>
+          <select>
+            <option>futrue</option>
+            <option>options</option>
+            <option>power</option>
+          </select>
+        </div>
+        <div className='item'>
+          <label>symbol:</label>
+          <select>
+            <option>BTCUSD</option>
+            <option>ETHUSD</option>
+          </select>
+        </div>
+        <div className='item'>
+          <label>volume:</label>
+          <input value={volume} type='number' onChange={e => setVolume(e.target.value)}/>
+        </div>
       </div>
       <div className='action'>
         <button onClick={trade}>TRADE</button>
